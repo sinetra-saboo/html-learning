@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>آموزش HTML, CSS, JS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="hero">
+
+        <!-- پس زمینه -->
+        <div class="blob blob-one"></div>
+        <div class="blob blob-two"></div>
+        <div class="blob blob-three"></div>
+
+        <!-- عناصر تزئینی -->
+        <div class="code-element code-one">&lt;html&gt;</div>
+        <div class="code-element code-two">{ CSS }</div>
+        <div class="code-element code-three">JS</div>
+        <div class="code-element code-four">&lt;/&gt;</div>
+        <div class="code-element code-five">01</div>
+        <div class="code-element code-six">{ }</div>
+
+        <!-- =========================================
+             صفحه اول
+        ========================================== -->
+
+        <section id="introScreen" class="screen intro-screen">
+
+            <div class="intro-content">
+
+                <h1>آموزش HTML, CSS, JS</h1>
+
+                <p>
+                    اینجا قراره دنیای وب رو با هم بسازیم.
+                </p>
+
+                <button id="startButton" class="main-button">
+                    شروع کنیم
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             صفحه کشورها
+        ========================================== -->
+
+        <section id="countryScreen" class="screen country-screen">
+
+            <div class="country-content">
+
+                <div class="country-cards">
+
+                    <div class="country-card">
+
+                        <div class="country-image-wrapper">
+                            <img
+                                src="iran.jpg"
+                                alt="ایران"
+                            >
+                        </div>
+
+                        <h2>ایران</h2>
+
+                        <span class="country-code">
+                            IR
+                        </span>
+
+                    </div>
+
+
+                    <div class="country-card">
+
+                        <div class="country-image-wrapper">
+                            <img
+                                src="eng.jpg"
+                                alt="انگلستان"
+                            >
+                        </div>
+
+                        <h2>انگلستان</h2>
+
+                        <span class="country-code">
+                            EN
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p class="country-question">
+                    این دو کشور چه کشورهایی هستند و زبانشان چیست؟
+                </p>
+
+
+                <button
+                    id="understoodButton"
+                    class="main-button understood-button"
+                >
+                    متوجه شدم
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             صفحه زبان افراد
+        ========================================== -->
+
+        <section id="languageScreen" class="screen language-screen">
+
+            <div class="language-content">
+
+                <div class="lesson-label">
+                    LANGUAGE CHALLENGE
+                </div>
+
+                <h2>
+                    برای اینکه با هر کدام از این افراد حرف بزنیم
+                    چه زبانی باید بلد باشیم؟
+                </h2>
+
+
+                <div class="people-container">
+
+                    <!-- زن -->
+                    <div
+                        class="person person-woman"
+                        data-person="woman"
+                    >
+                        <div class="person-image-wrapper">
+
+                            <img
+                                src="french.png"
+                                alt="خانم"
+                            >
+
+                        </div>
+
+                        <div class="person-name">
+                            خانم
+                        </div>
+                    </div>
+
+
+                    <!-- مرد -->
+                    <div
+                        class="person person-man"
+                        data-person="man"
+                    >
+                        <div class="person-image-wrapper">
+
+                            <img
+                                src="england.png"
+                                alt="آقا"
+                            >
+
+                        </div>
+
+                        <div class="person-name">
+                            آقا
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="language-buttons">
+
+                    <button
+                        class="language-button"
+                        data-language="persian"
+                    >
+                        فارسی
+                    </button>
+
+                    <button
+                        class="language-button"
+                        data-language="german"
+                    >
+                        آلمانی
+                    </button>
+
+                    <button
+                        class="language-button"
+                        data-language="english"
+                    >
+                        انگلیسی
+                    </button>
+
+                    <button
+                        class="language-button"
+                        data-language="spanish"
+                    >
+                        اسپانیایی
+                    </button>
+
+                    <button
+                        class="language-button"
+                        data-language="egyptian"
+                    >
+                        مصری
+                    </button>
+
+                    <button
+                        class="language-button"
+                        data-language="french"
+                    >
+                        فرانسوی
+                    </button>
+
+                    <button
+                        class="language-button"
+                        data-language="turkish"
+                    >
+                        ترکی
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="answerMessage"
+                    class="answer-message"
+                ></div>
+
+
+                <button
+                    id="finalUnderstoodButton"
+                    class="main-button final-understood-button"
+                >
+                    فهمیدم
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             انیمیشن پاک شدن با پاک کن
+        ========================================== -->
+
+        <div
+            id="eraserTransition"
+            class="eraser-transition"
+        >
+
+            <div class="wipe-light"></div>
+
+            <img
+                id="eraser"
+                class="eraser"
+                src="eraser.png"
+                alt=""
+            >
+
+        </div>
+
+
+        <!-- =========================================
+             صفحه کامپیوتر
+        ========================================== -->
+
+        <section
+            id="computerScreen"
+            class="computer-screen"
+        >
+
+            <div class="computer-content">
+
+                <div class="computer-label">
+                    COMPUTER LANGUAGE
+                </div>
+
+                <h2>
+                    اگر بخواهیم به یک کامپیوتر
+                    <strong>دستور</strong>
+                    بدهیم،
+                    <br>
+                    باید با چه زبانی با او حرف بزنیم؟
+                </h2>
+
+
+                <div class="laptop-wrapper">
+
+                    <div class="laptop-glow"></div>
+
+                    <img
+                        src="laptop.png"
+                        alt="لپ‌تاپ"
+                        class="laptop-image"
+                    >
+
+                </div>
+
+
+                <button
+                    id="curiousButton"
+                    class="curious-button"
+                >
+                    <span>
+                        کنجکاوم بدونم
+                    </span>
+
+                    <span class="curious-arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             موج رنگی
+        ========================================== -->
+
+        <div
+            id="waveTransition"
+            class="wave-transition"
+        >
+
+            <div class="wave wave-1"></div>
+            <div class="wave wave-2"></div>
+            <div class="wave wave-3"></div>
+
+        </div>
+
+
+        <!-- =========================================
+             انفجار حروف کدنویسی
+        ========================================== -->
+
+        <div
+            id="codeExplosion"
+            class="code-explosion"
+        >
+
+            <span>&lt;/&gt;</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>0101</span>
+            <span>10111000</span>
+            <span>{ }</span>
+            <span>const</span>
+            <span>function()</span>
+            <span>console.log()</span>
+            <span>return</span>
+            <span>if (true)</span>
+            <span>class</span>
+            <span>let x = 1;</span>
+            <span>0x01</span>
+            <span>01100001</span>
+            <span>document</span>
+            <span>querySelector</span>
+            <span>import</span>
+            <span>export</span>
+            <span>while()</span>
+            <span>async</span>
+            <span>await</span>
+            <span>boolean</span>
+            <span>array[]</span>
+            <span>object</span>
+            <span>undefined</span>
+            <span>NaN</span>
+            <span>==</span>
+            <span>=&gt;</span>
+            <span>;</span>
+            <span>&lt;div&gt;</span>
+            <span>01001010</span>
+            <span>01101001</span>
+            <span>01000011</span>
+            <span>01</span>
+            <span>JS</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>&lt;body&gt;</span>
+            <span>npm</span>
+            <span>API</span>
+            <span>code</span>
+            <span>dev()</span>
+            <span>0b101</span>
+            <span>...</span>
+
+        </div>
+
+
+        <!-- =========================================
+             صفحه باینری
+        ========================================== -->
+
+        <section
+            id="binaryScreen"
+            class="binary-screen"
+        >
+
+            <div class="binary-content">
+
+                <div class="code-window">
+
+                    <div class="code-window-bar">
+
+                        <div class="window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="file-name">
+                            <span class="file-icon">
+                                &lt;/&gt;
+                            </span>
+
+                            language.txt
+                        </div>
+
+                    </div>
+
+
+                    <div class="code-area">
+
+                        <div class="line">
+                            <span class="line-number">1</span>
+                            <span class="binary-text">
+                                10111000
+                            </span>
+                        </div>
+
+                        <div class="line">
+                            <span class="line-number">2</span>
+                            <span class="binary-text">
+                                01100001
+                            </span>
+                        </div>
+
+                        <div class="line">
+                            <span class="line-number">3</span>
+                            <span class="binary-text">
+                                00000000
+                            </span>
+                        </div>
+
+                        <div class="line">
+                            <span class="line-number">4</span>
+                            <span class="binary-text">
+                                00000000
+                            </span>
+                        </div>
+
+                        <div class="line">
+                            <span class="line-number">5</span>
+                            <span class="binary-text">
+                                00000000
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <h2 class="binary-title">
+                    زبان
+                    <strong>0</strong>
+                    <span>و</span>
+                    <strong>1</strong>
+                </h2>
+
+
+                <button
+                    id="nextBinaryButton"
+                    class="next-button"
+                >
+                    بعدی
+                    <span>←</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             صفحه کاتلین بوث
+        ========================================== -->
+
+        <section
+            id="kathleenScreen"
+            class="kathleen-screen"
+        >
+
+            <div class="portal-glow"></div>
+
+            <div class="kathleen-content">
+
+                <div class="kathleen-image-wrapper">
+
+                    <div class="kathleen-image-glow"></div>
+
+                    <img
+                        src="kathleen.jpg"
+                        alt="کاتلین بوث"
+                        class="kathleen-image"
+                    >
+
+                </div>
+
+
+                <div class="kathleen-text">
+
+                    <div class="history-label">
+                        COMPUTER HISTORY
+                    </div>
+
+                    <p>
+                        در سال ۱۹۴۷، کاتلین بوث، دانشمند و مهندس بریتانیایی،
+                        برای کامپیوتر اِی‌آر‌سی یک روش نمادین برای نوشتن
+                        دستورهای ماشین طراحی کرد.
+                        یعنی به‌جای اینکه انسان مجبور باشه مستقیماً با اون
+                        صفر و یک‌های سخت کار کنه، از حروف و نمادهای قابل
+                        تشخیص استفاده کنه.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
